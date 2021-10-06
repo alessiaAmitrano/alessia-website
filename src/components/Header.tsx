@@ -4,7 +4,7 @@ import Image from './Image';
 function Header() {
   return (
     <header className='App-header'>
-      <Image imgSrc={'./alessia.png'} altText={'logo'} width={'150'}></Image>
+      <Image imgSrc={'./aa-logo.png'} altText={'logo'} width={'50'}></Image>
     </header>
   );
 }
