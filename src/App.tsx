@@ -5,20 +5,25 @@ import Home from './pages/Home';
 import WebDevMain from './pages/WebDevMain';
 import PaintingMain from './pages/PaintingMain';
 import { ROUTES } from './shared/enums';
+import RouteError from './pages/RouteError';
+
 function App() {
   return (
     <div className='App'>
       <Header></Header>
       <Router>
         <Switch>
-          <Route path={ROUTES.HOME}>
-            <Home/>
+          <Route exact path={ROUTES.HOME}>
+            <Home />
           </Route>
           <Route path={ROUTES.WEB_DEV}>
-            <WebDevMain></WebDevMain>
+            <WebDevMain/>
           </Route>
           <Route path={ROUTES.MINI_PAINTING}>
-            <PaintingMain></PaintingMain>
+            <PaintingMain/>
+          </Route>
+          <Route path='*'>
+            <RouteError/>
           </Route>
         </Switch>
       </Router>
