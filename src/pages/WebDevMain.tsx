@@ -1,5 +1,12 @@
+import Header from '../components/Header';
+
 function WebDevMain() {
-  return <div> Web Dev Main</div>
+  return (
+    <>
+      <Header></Header>
+      <div>Dev Main</div>
+    </>
+  );
 }
 
 export default WebDevMain;

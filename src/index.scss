@@ -1,9 +1,12 @@
 body {
-  margin: 0;
-  font-family: 'Inconsolata', monospace;
+  background-color: rgb(13,17,23);
+  color: white;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
+  margin: 0;
+  text-rendering: optimizeLegibility;
 }
 
 code {

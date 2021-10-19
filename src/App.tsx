@@ -1,16 +1,14 @@
-import './App.scss';
-import Header from './components/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import WebDevMain from './pages/WebDevMain';
 import PaintingMain from './pages/PaintingMain';
 import { ROUTES } from './shared/enums';
 import RouteError from './pages/RouteError';
+import './App.scss';
 
 function App() {
   return (
     <div className='App'>
-      <Header></Header>
       <Router>
         <Switch>
           <Route exact path={ROUTES.HOME}>
