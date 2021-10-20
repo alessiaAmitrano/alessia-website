@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../shared/enums';
 import './Home.scss';
-import dev from '../lottie/dev.json';
-import { LottieAnimation } from 'react-lottie-tools';
+import typer from '../lottie/typer.json';
+import LottieWrapper from '../components/LottieWrapper';
 
 
 function Home() {
@@ -20,9 +20,11 @@ function Home() {
       </div>
       <Link to={ROUTES.WEB_DEV}>FE Web Dev</Link>
       <Link to={ROUTES.MINI_PAINTING}>Painting</Link>
-      <LottieAnimation
-        animation={dev}
-        style={{ width: '600px', height: '600px' }}
+      <LottieWrapper
+        animation={typer}
+        frames={[0, 400]}
+        justPlayInView={true}
+        style={{ width: '650px', height: '650px' }}
       />
     </section>
   );
