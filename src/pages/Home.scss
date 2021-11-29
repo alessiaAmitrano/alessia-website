@@ -1,13 +1,30 @@
-.Home-hello {
-  padding-top: 500px;
-  max-width: 600px;
+.Home{
+  &-hello {
+    padding-top: 600px;
+    max-width: 600px;
 
-  h1{
-    font-size: 72px;
-    margin-bottom: 30px;
+    h1{
+      font-size: 72px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1em;
+    }
   }
 
-  h2 {
-    font-size: 1em;
+  &-img {
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    width: 40%;
+    animation: float 1.5s infinite;
   }
+}
+
+
+@keyframes float {
+  0% {top: 50px}
+  50% {top: 55px}
+  100% {top: 50px}
 }

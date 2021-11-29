@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../shared/enums';
+import Image from '../components/Image';
 import './Home.scss';
-import typer from '../lottie/typer.json';
-import LottieWrapper from '../components/LottieWrapper';
+// import typer from '../lottie/typer.json';
+// import LottieWrapper from '../components/LottieWrapper';
 
 
 function Home() {
@@ -20,12 +21,15 @@ function Home() {
       </div>
       <Link to={ROUTES.WEB_DEV}>FE Web Dev</Link>
       <Link to={ROUTES.MINI_PAINTING}>Painting</Link>
-      <LottieWrapper
+      {/* <LottieWrapper
+        className="Home-lottie-type"
         animation={typer}
         frames={[0, 400]}
         justPlayInView={true}
+        loop={true}
         style={{ width: '650px', height: '650px' }}
-      />
+      /> */}
+      <Image className={'Home-img'} imgSrc={'./me-big.png'} altText={'me'}/>
     </section>
   );
 }
