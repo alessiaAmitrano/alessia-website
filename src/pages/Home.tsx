@@ -18,9 +18,9 @@ const gifFloat = keyframes`
 
 const FloatingImage = styled.img`
   position: absolute;
-  top: 50px;
-  left: 0;
-  width: 100%;
+  top: -20px;
+  right: 5%;
+  width: 50%;
   animation: ${gifFloatMobile} 1.5s infinite;
 
     @media ${device.laptop} {
@@ -50,10 +50,29 @@ const HomeH2 = styled.h2`
 const HomeLinkWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
+  margin-top: 30px;
 `;
 
 const StyledLink = styled(Link)`
-font-size: 2em;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  background-color: #0d1117;
+  padding: 10px 20px;
+  border: 1px solid white;
+  min-width: 170px;
+  text-align: center;
+
+  &:nth-of-type(2) {
+    margin-left: 20px;
+  }
+
+  &:hover {
+    color: #0d1117;
+    background-color: white;
+    font-weight: bold;
+    transition: background .2s ease;
+  }
 `;
 
 function Home() {
