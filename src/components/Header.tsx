@@ -1,11 +1,19 @@
 import './Header.scss';
 import Image from './Image';
+import styled from 'styled-components';
+
+const StyledHeader = styled.header`
+  background-color: rgb(22, 27, 34);
+  padding: 10px 30px;
+  text-align: left;
+  width: 100%;
+`;
 
 function Header() {
   return (
-    <header className='App-header'>
+    <StyledHeader>
       <Image imgSrc={'./aa-logo.png'} altText={'logo'} width={'50'}></Image>
-    </header>
+    </StyledHeader>
   );
 }
 
