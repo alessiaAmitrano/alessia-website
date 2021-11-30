@@ -1,4 +1,3 @@
-import './Header.scss';
 import Image from './Image';
 import styled from 'styled-components';
 

@@ -5,12 +5,17 @@ import WebDevMain from './pages/WebDevMain';
 import PaintingMain from './pages/PaintingMain';
 import { ROUTES } from './shared/enums';
 import RouteError from './pages/RouteError';
+import { device } from './shared/constants';
 
 const AppWrapper = styled.div`
   margin: 0 auto;
   max-width: 1440px;
   height: 100%;
   position: relative;
+
+  @media ${device.mobileS} {
+    max-width: 90vw;
+  }
 `;
 
 function App() {
