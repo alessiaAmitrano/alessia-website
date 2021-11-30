@@ -14,7 +14,7 @@ const AppWrapper = styled.div`
   position: relative;
 
   @media ${device.mobileS} {
-    max-width: 90vw;
+    max-width: 80vw;
   }
 `;
 

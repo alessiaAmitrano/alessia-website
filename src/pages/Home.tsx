@@ -16,11 +16,30 @@ const gifFloat = keyframes`
   100% {top: 50px}
 `;
 
+const StyledSection = styled.section`
+position: relative;
+`;
+
+const FloatingImgWrapper = styled.div`
+position: absolute;
+
+@media ${device.mobileS} {
+  top: 410px;
+  width: 100%;
+  left: 15px;
+}
+
+@media ${device.laptop} {
+    width: 70%;
+  top: -45%;
+  right: -20%;
+  left: auto;
+}
+`;
+
 const FloatingImage = styled.img`
-  position: absolute;
-  top: -20px;
-  right: 5%;
-  width: 50%;
+  display: block;
+  width: 100%;
   animation: ${gifFloatMobile} 1.5s infinite;
 
     @media ${device.laptop} {
@@ -45,12 +64,18 @@ const HomeH1 = styled.h1`
 
 const HomeH2 = styled.h2`
   font-size: 1em;
+  line-height: 25px;
 `;
 
 const HomeLinkWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
   margin-top: 30px;
+  justify-content: center;
+
+  @media ${device.tablet} {
+    justify-content: left;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -64,8 +89,14 @@ const StyledLink = styled(Link)`
   text-align: center;
 
   &:nth-of-type(2) {
-    margin-left: 20px;
+    margin-top: 20px;
   }
+
+  @media ${device.tablet} {
+  &:nth-of-type(2) {
+    margin: 0 0 0 20px;
+  }
+}
 
   &:hover {
     color: #0d1117;
@@ -78,13 +109,15 @@ const StyledLink = styled(Link)`
 function Home() {
 
   return (
-    <section>
-      <FloatingImage src='./me_1.gif' alt='me'/>
+    <StyledSection>
+      <FloatingImgWrapper>
+        <FloatingImage src='./me_1.gif' alt='me'/>
+      </FloatingImgWrapper>
       <HomeTextWrapper>
         <HomeH1>Hi, I am Alessia</HomeH1>
         <HomeH2>
           I am a Senior Front-End Web Developer by day and a miniature and scale
-          model artist in my spare time.
+          model artist by night.
           <br />
           What do you want to know more about?
         </HomeH2>
@@ -93,7 +126,7 @@ function Home() {
       <StyledLink to={ROUTES.WEB_DEV}>FE Web Dev</StyledLink>
       <StyledLink to={ROUTES.MINI_PAINTING}>Painting</StyledLink>
     </HomeLinkWrapper>
-    </section>
+    </StyledSection>
   );
 }
 
