@@ -1,35 +1,51 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../shared/enums';
 import Image from '../components/Image';
-import './Home.scss';
-// import typer from '../lottie/typer.json';
-// import LottieWrapper from '../components/LottieWrapper';
+import styled, { keyframes } from 'styled-components';
 
+const gifFloat = keyframes`
+  0% {top: 50px}
+  50% {top: 55px}
+  100% {top: 50px}
+`;
+
+const FloatingImage = styled(Image)`
+  position: absolute;
+  top: 50px;
+  right: 150px;
+  width: 40%;
+  animation: ${gifFloat} 1.5s infinite;
+`;
+
+const HomeTextWrapper = styled.div`
+  padding-top: 600px;
+  max-width: 600px;
+`;
+
+const HomeH1 = styled.h1`
+  font-size: 72px;
+  margin-bottom: 30px;
+`;
+const HomeH2 = styled.h2`
+  font-size: 1em;
+`;
 
 function Home() {
 
   return (
-    <section className='Home'>
-      <div className='Home-hello'>
-        <h1 className='Home-h1'>Hi, I am Alessia</h1>
-        <h2 className='Home-h2'>
+    <section>
+      <HomeTextWrapper>
+        <HomeH1>Hi, I am Alessia</HomeH1>
+        <HomeH2>
           I am a Senior Front-End Web Developer by day and a miniature and scale
           model artist in my spare time.
           <br />
           What do you want to know more about?
-        </h2>
-      </div>
+        </HomeH2>
+      </HomeTextWrapper>
       <Link to={ROUTES.WEB_DEV}>FE Web Dev</Link>
       <Link to={ROUTES.MINI_PAINTING}>Painting</Link>
-      {/* <LottieWrapper
-        className="Home-lottie-type"
-        animation={typer}
-        frames={[0, 400]}
-        justPlayInView={true}
-        loop={true}
-        style={{ width: '650px', height: '650px' }}
-      /> */}
-      <Image className={'Home-img'} imgSrc={'./me-big.png'} altText={'me'}/>
+      <FloatingImage imgSrc={'./me-big.png'} altText={'me'}/>
     </section>
   );
 }
