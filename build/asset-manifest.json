@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.24963729.chunk.css",
-    "main.js": "/static/js/main.dfb6ec79.chunk.js",
-    "main.js.map": "/static/js/main.dfb6ec79.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ed508600.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ed508600.js.map",
-    "static/js/2.7dfc5e19.chunk.js": "/static/js/2.7dfc5e19.chunk.js",
-    "static/js/2.7dfc5e19.chunk.js.map": "/static/js/2.7dfc5e19.chunk.js.map",
-    "static/js/3.d1556750.chunk.js": "/static/js/3.d1556750.chunk.js",
-    "static/js/3.d1556750.chunk.js.map": "/static/js/3.d1556750.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.24963729.chunk.css.map": "/static/css/main.24963729.chunk.css.map",
-    "static/js/2.7dfc5e19.chunk.js.LICENSE.txt": "/static/js/2.7dfc5e19.chunk.js.LICENSE.txt"
+    "main.css": "/alessia-website/static/css/main.24963729.chunk.css",
+    "main.js": "/alessia-website/static/js/main.90e9fec5.chunk.js",
+    "main.js.map": "/alessia-website/static/js/main.90e9fec5.chunk.js.map",
+    "runtime-main.js": "/alessia-website/static/js/runtime-main.662b950f.js",
+    "runtime-main.js.map": "/alessia-website/static/js/runtime-main.662b950f.js.map",
+    "static/js/2.2e2848c2.chunk.js": "/alessia-website/static/js/2.2e2848c2.chunk.js",
+    "static/js/2.2e2848c2.chunk.js.map": "/alessia-website/static/js/2.2e2848c2.chunk.js.map",
+    "static/js/3.d1556750.chunk.js": "/alessia-website/static/js/3.d1556750.chunk.js",
+    "static/js/3.d1556750.chunk.js.map": "/alessia-website/static/js/3.d1556750.chunk.js.map",
+    "index.html": "/alessia-website/index.html",
+    "static/css/main.24963729.chunk.css.map": "/alessia-website/static/css/main.24963729.chunk.css.map",
+    "static/js/2.2e2848c2.chunk.js.LICENSE.txt": "/alessia-website/static/js/2.2e2848c2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ed508600.js",
-    "static/js/2.7dfc5e19.chunk.js",
+    "static/js/runtime-main.662b950f.js",
+    "static/js/2.2e2848c2.chunk.js",
     "static/css/main.24963729.chunk.css",
-    "static/js/main.dfb6ec79.chunk.js"
+    "static/js/main.90e9fec5.chunk.js"
   ]
 }
