@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from '../shared/enums';
 import styled, { keyframes } from 'styled-components';
 import { device } from '../shared/constants';
+import Button from '../components/Button';
 
 
 const gifFloatMobile= keyframes`
@@ -78,34 +79,6 @@ const HomeLinkWrapper = styled.div`
   }
 `;
 
-const StyledLink = styled(Link)`
-  font-size: 1.5em;
-  color: white;
-  text-decoration: none;
-  background-color: #0d1117;
-  padding: 10px 20px;
-  border: 1px solid white;
-  min-width: 170px;
-  text-align: center;
-
-  &:nth-of-type(2) {
-    margin-top: 20px;
-  }
-
-  @media ${device.tablet} {
-  &:nth-of-type(2) {
-    margin: 0 0 0 20px;
-  }
-}
-
-  &:hover {
-    color: #0d1117;
-    background-color: white;
-    font-weight: bold;
-    transition: background .2s ease;
-  }
-`;
-
 function Home() {
 
   return (
@@ -123,8 +96,12 @@ function Home() {
         </HomeH2>
       </HomeTextWrapper>
     <HomeLinkWrapper>
-      <StyledLink to={ROUTES.WEB_DEV}>FE Web Dev</StyledLink>
-      <StyledLink to={ROUTES.MINI_PAINTING}>Painting</StyledLink>
+      <Button>
+      <Link to={ROUTES.WEB_DEV}>FE Web Dev</Link>
+      </Button>
+      <Button>
+      <Link to={ROUTES.MINI_PAINTING}>Painting</Link>
+      </Button>
     </HomeLinkWrapper>
     </StyledSection>
   );
