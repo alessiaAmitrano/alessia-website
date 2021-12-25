@@ -84,7 +84,7 @@ function Home() {
   return (
     <StyledSection>
       <FloatingImgWrapper>
-        <FloatingImage src='./me_1.gif' alt='me'/>
+        <FloatingImage src='/alessia-website/me_1.gif' alt='me' />
       </FloatingImgWrapper>
       <HomeTextWrapper>
         <HomeH1>Hi, I am Alessia</HomeH1>
@@ -95,14 +95,14 @@ function Home() {
           What do you want to know more about?
         </HomeH2>
       </HomeTextWrapper>
-    <HomeLinkWrapper>
-      <Button>
-      <Link to={ROUTES.WEB_DEV}>FE Web Dev</Link>
-      </Button>
-      <Button>
-      <Link to={ROUTES.MINI_PAINTING}>Painting</Link>
-      </Button>
-    </HomeLinkWrapper>
+      <HomeLinkWrapper>
+        <Button>
+          <Link to={`${ROUTES.WEB_DEV}${ROUTES.EXPERIENCE}`}>FE Web Dev</Link>
+        </Button>
+        <Button>
+          <Link to={ROUTES.MINI_PAINTING}>Painting</Link>
+        </Button>
+      </HomeLinkWrapper>
     </StyledSection>
   );
 }

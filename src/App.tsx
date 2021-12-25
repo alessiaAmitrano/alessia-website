@@ -27,13 +27,13 @@ function App() {
             <Home />
           </Route>
           <Route path={ROUTES.WEB_DEV}>
-            <WebDevMain/>
+            <WebDevMain />
           </Route>
           <Route path={ROUTES.MINI_PAINTING}>
-            <PaintingMain/>
+            <PaintingMain />
           </Route>
           <Route path='*'>
-            <RouteError/>
+            <RouteError />
           </Route>
         </Switch>
       </Router>
