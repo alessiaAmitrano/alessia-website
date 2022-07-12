@@ -1,78 +1,52 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../shared/enums';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { device } from '../shared/constants';
-import Button from '../components/Button';
-
-
-const gifFloatMobile= keyframes`
-  0% {top: 50px}
-  50% {top: 52px}
-  100% {top: 50px}
-`;
-
-const gifFloat = keyframes`
-  0% {top: 50px}
-  50% {top: 55px}
-  100% {top: 50px}
-`;
+import Button from '@mui/material/Button';
+import { Avatar } from '@mui/material';
+import DarkModeSwitch from '../components/DarkModeSwitch';
 
 const StyledSection = styled.section`
 position: relative;
-`;
 
-const FloatingImgWrapper = styled.div`
-position: absolute;
-
-@media ${device.mobileS} {
-  top: 410px;
-  width: 100%;
-  left: 15px;
-}
-
+display: grid;
 @media ${device.laptop} {
-    width: 70%;
-  top: -45%;
-  right: -20%;
-  left: auto;
+  height: 100vh;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-columns: 15% 50% 20% 15%;
 }
 `;
 
-const FloatingImage = styled.img`
-  display: block;
-  width: 100%;
-  animation: ${gifFloatMobile} 1.5s infinite;
-
-    @media ${device.laptop} {
-      animation: ${gifFloat} 1.5s infinite;
-    }
-  `;
-
-const HomeTextWrapper = styled.div`
-  padding-top: 20%;
+const HomeContentWrapper = styled.div`
+  /* padding-top: 10%; */
   max-width: 600px;
   text-align: center;
+  grid-area: 2/2/3/3;
 
   @media ${device.laptop} {
+    max-width: 500px;
     text-align: left;
   }
 `;
 
 const HomeH1 = styled.h1`
-  font-size: 72px;
-  margin-bottom: 30px;
+  font-size: 50px;
+  letter-spacing: -1px;
+  line-height: 55px;
+  margin-bottom: 20px;
 `;
 
 const HomeH2 = styled.h2`
-  font-size: 1em;
-  line-height: 25px;
+  font-size: 0.9rem;
+  line-height: 22px;
 `;
 
 const HomeLinkWrapper = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   margin-top: 30px;
   justify-content: center;
+  align-items: flex-start;
 
   @media ${device.tablet} {
     justify-content: left;
@@ -83,10 +57,13 @@ function Home() {
 
   return (
     <StyledSection>
-      <FloatingImgWrapper>
-        <FloatingImage src='/alessia-website/me_1.gif' alt='me' />
-      </FloatingImgWrapper>
-      <HomeTextWrapper>
+      <DarkModeSwitch/>
+      <HomeContentWrapper>
+        <Avatar
+          alt='Alessia Amitrano'
+          src='https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=49ed3252c0b2ffb49cf8b508892e452d'
+          sx={{ width: 180, height: 180 }}
+        />
         <HomeH1>Hi, I am Alessia</HomeH1>
         <HomeH2>
           I am a Senior Front-End Web Developer by day and a miniature and scale
@@ -94,15 +71,15 @@ function Home() {
           <br />
           What do you want to know more about?
         </HomeH2>
-      </HomeTextWrapper>
-      <HomeLinkWrapper>
-        <Button>
-          <Link to={`${ROUTES.WEB_DEV}${ROUTES.EXPERIENCE}`}>FE Web Dev</Link>
-        </Button>
-        <Button>
-          <Link to={ROUTES.MINI_PAINTING}>Painting</Link>
-        </Button>
-      </HomeLinkWrapper>
+        <HomeLinkWrapper>
+          <Button variant='contained' size='large'>
+            <Link to={`${ROUTES.WEB_DEV}${ROUTES.EXPERIENCE}`}>FE Web Dev</Link>
+          </Button>
+          <Button variant='contained' size='large'>
+            <Link to={ROUTES.MINI_PAINTING}>Painting</Link>
+          </Button>
+        </HomeLinkWrapper>
+      </HomeContentWrapper>
     </StyledSection>
   );
 }

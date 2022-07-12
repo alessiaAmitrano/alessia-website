@@ -9,19 +9,21 @@ import { device } from './shared/constants';
 
 const AppWrapper = styled.div`
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 80vw;
   height: 100%;
   position: relative;
 
-  @media ${device.mobileS} {
-    max-width: 80vw;
+  @media ${device.laptop} {
+    max-width: 100vw;
+    height: 100vh;
+    overflow: scroll;
   }
 `;
 
 function App() {
   return (
     <AppWrapper>
-      <Router>
+      <Router basename={ROUTES.HOME}>
         <Switch>
           <Route exact path={ROUTES.HOME}>
             <Home />

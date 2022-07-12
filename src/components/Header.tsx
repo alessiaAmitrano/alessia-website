@@ -1,7 +1,6 @@
 import Image from './Image';
 import styled from 'styled-components';
 import { ReactNode } from 'react';
-import { useRouteMatch } from 'react-router-dom';
 
 interface HeaderProps {
 children?: ReactNode;
